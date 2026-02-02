@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: #eef2ff;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+<form onsubmit="sendWhatsApp(); return false;">
+  <input id="name" placeholder="Your Name"><br><br>
+  <input id="mobile" placeholder="Mobile Number"><br><br>
+  <textarea id="msg" placeholder="Your Message"></textarea><br><br>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var msg = document.getElementById("msg").value;
+
+  var url = "https://wa.me/+919016465290?text="
+    + "Name: " + name + "%0A"
+    + "Mobile: " + mobile + "%0A"
+    + "Message: " + msg;
+
+  window.open(url, "_blank");
+}
+</script>
+<h1>Contact Me</h1>
+<p>WhatsApp pe direct baat kare</p>
+
+<button onclick="window.location.href='https://wa.me/+919016465290'">
+  Chat on WhatsApp
+</button>
+
+<br><br>
+
+<a href="index.html">⬅ Back to Home</a>
+
+</body>
+</html>
